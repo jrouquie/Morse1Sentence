@@ -30,7 +30,7 @@ A    B     C     D   E   F      G    H    I    J     K    L    M    N    O     P
       Q     R    S   T   U    V     W    X     Y     Z
 ```
 
-Repeat the sentence a few times. (Now.)<br>
+Repeat the sentence a few times. (Now, it takes 30 seconds.)<br>
 You've just "memorized" the Morse code.
 
 Goal
@@ -40,7 +40,7 @@ The goal is to be able to reconstitute Morse code in a few minutes, by heart, in
 Pretend you might be some day in an extreme case like Jeremiah Denton.
 Or in the movie «Executive Decision» (spoiler: https://www.youtube.com/watch?v=cNl8HigtLzE).
 You need to send a Morse message once, you've got some time to encode it,
-you don't have access to any material: you must work from what you already know.
+you don't have access to any material (esp. no internet): you must work from what you already know.
 
 The goal is not to be able to send/receive messages in Morse after just learning this mnemonic.
 For that, one should practice a lot and get an instant association between the sound and the letter.
@@ -54,14 +54,15 @@ For instance, a drawing for each letter to bring to life the dots and dashes, or
 I wasn't satisfied because they treat each letter independently, so it's easy to forget the code of one letter.
 They are intended to be a help during learning. I have a different goal.
 
-One of those mnemonics got me interested: the idea of William Harder to represent each morse codepoint by a word;
+One of those mnemonics got me interested: <a href="https://ece.uwaterloo.ca/~dwharder/Morse_code/">the idea of William Harder</a>
+to represent each morse codepoint by a word;
 the letters of the word being each a dot or a dash.
 Namely bdfghjklpqty encode dashes, while aceimnorsuvwxz encode dots:
 the first group are "tall" letters (letters with an ascender or a descender) while the second group are letters with the same height as "x".
 For instance, "foxy" is read as |..|, or -..-, which is morse code for "X".
 Douglas Wilhelm Harder then chose 26 words to memorize each morse codepoint.
 
-I wanted to take this idea one step further: what is a sequence of words? A sentence!
+I wanted to take this idea one step further: **what is a sequence of words? A sentence!**
 Plus, a sentence should be easier to memorize than a list of unrelated words,
 its meaning and its flow helping to memorize it.
 
@@ -72,6 +73,7 @@ For instance, the tenth word must represent J, or `.---`, ie one of [aceimnorsuv
 There aren't so many words, the most common ones are "ably ally eddy edgy idly idyl iffy myth ugly".
 (Some other letters have more possible words).
 
+<img src="illustration.jpg" width="90pc"/>
 
 Programming
 ===========
@@ -108,7 +110,7 @@ I'm happy to read about improvements if you want to try (beware it's difficult)!
 Wait, new idea!
 ===============
 Instead of "tall" / "short" letters, the alphabet partition could be into
-"letters whith a hole" (abdegopq) / remaining letters (cfhijklmnrstuvwxyz)
+"letters whith a hole" (abdegopq) / remaining letters (cfhijklmnrstuvwxyz).
 The advantage is that vowels are more evenly distributed among both groups, so there should be fewer problematic codepoints.
 Well, scratch that, it seems harder to mentally convert a word into a code. The alphabet partition is less visual.
 
