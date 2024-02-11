@@ -1,4 +1,4 @@
-«Memorize Morse in one sentence.»
+Memorize Morse in one sentence.
 
 ### my love life has a vibe, the same as edgy pop star DJ «Dr BBQ» adds — glad she won't cut away all good gold lyre!
 
@@ -30,15 +30,15 @@ A    B     C     D   E   F      G    H    I    J     K    L    M    N    O     P
       Q     R    S   T   U    V     W    X     Y     Z
 ```
 
-Repeat the sentence a few times. (Now, it takes 30 seconds.)<br>
-You've just "memorized" the Morse code.
+Repeat the sentence a few times. (Now ! It only takes 30 seconds 😉.)<br>
+Done ? You've just "memorized" the Morse code.
 
 Goal
 ====
 Let's state the goal so you know whether this is of interest to you:
-The goal is to be able to reconstitute Morse code in a few minutes, by heart, in several years, without practising much in between.
+The goal is to be able to reconstitute Morse code in a few minutes, by heart, in several years, without practicing much in between.
 Pretend you might be some day in an extreme case like Jeremiah Denton.
-Or in the movie «Executive Decision» (spoiler: https://www.youtube.com/watch?v=cNl8HigtLzE).
+Or in the movie «Executive Decision» (spoiler: https://www.youtube.com/watch?v=cNl8HigtLzE ).
 You need to send a Morse message once, you've got some time to encode it,
 you don't have access to any material (esp. no internet): you must work from what you already know.
 
@@ -55,21 +55,21 @@ I wasn't satisfied because they treat each letter independently, so it's easy to
 They are intended to be a help during learning. I have a different goal.
 
 One of those mnemonics got me interested: <a href="https://ece.uwaterloo.ca/~dwharder/Morse_code/">the idea of William Harder</a>
-to represent each morse codepoint by a word;
+to represent each Morse codepoint by a word;
 the letters of the word being each a dot or a dash.
 Namely bdfghjklpqty encode dashes, while aceimnorsuvwxz encode dots:
 the first group are "tall" letters (letters with an ascender or a descender) while the second group are letters with the same height as "x".
-For instance, "foxy" is read as |..|, or -..-, which is morse code for "X".
-Douglas Wilhelm Harder then chose 26 words to memorize each morse codepoint.
+For instance, "foxy" is read as |..|, or -..-, which is Morse code for "X".
+Douglas Wilhelm Harder then chose 26 words to memorize each Morse codepoint.
 
-I wanted to take this idea one step further: **what is a sequence of words? A sentence!**
+I wanted to take this idea one step further: **What is a sequence of words? A sentence!**
 Plus, a sentence should be easier to memorize than a list of unrelated words,
 its meaning and its flow helping to memorize it.
 
-So I set out to find a sentence of 26 words with this constraint: the nth word must represent the morse code of the nth letter of the alphabet (easy).
+So I set out to find a sentence of 26 words with this constraint: the nth word must represent the Morse code of the nth letter of the alphabet (easy).
 The sentence should somewhat make sense (hard).
 
-For instance, the tenth word must represent J, or `.---`, ie one of [aceimnorsuvwxz] followed by three letters among [bdfghjklpqty].
+For instance, the tenth word must represent J, or `.---`, i.e. one of [aceimnorsuvwxz] followed by three letters among [bdfghjklpqty].
 There aren't so many words, the most common ones are "ably ally eddy edgy idly idyl iffy myth ugly".
 (Some other letters have more possible words).
 
@@ -86,7 +86,7 @@ The algorithm is thus:
 for i from 1 to 26:
   go through all possible words for the ith letter
     for each word, tentatively add it to the sentence, score the result
-  pick one of those words at random, with a probability proprotionnal to the readability score
+  pick one of those words at random, with a probability proportional to the readability score
 
 repeat many times and surface the most readable sentences
 ```
@@ -107,12 +107,20 @@ Here is the result:
 
 I'm happy to read about improvements if you want to try (beware it's difficult)!
 
-Wait, new idea!
-===============
+Wait, new idea! AKA, future work
+================================
 Instead of "tall" / "short" letters, the alphabet partition could be into
-"letters whith a hole" (abdegopq) / remaining letters (cfhijklmnrstuvwxyz).
+"letters with a hole" (abdegopq) / remaining letters (cfhijklmnrstuvwxyz).
 The advantage is that vowels are more evenly distributed among both groups, so there should be fewer problematic codepoints.
 Well, scratch that, it seems harder to mentally convert a word into a code. The alphabet partition is less visual.
+But maybe split the alphabet into two intervals, like [a-i] and [j-z] (or some other position to cut)?
+
+Also, at the rate at which LLM improve, and with a better algorithm than greedy, it's certainly possible to do better.
+But for me, I was able to effortlessly remember that sentence after a few months without thinking about it.
+It's enough now to think about it once a year. Job's done.
+
+### my love life has a vibe, the same as edgy pop star DJ «Dr BBQ» adds — glad she won't cut away all good gold lyre!
+
 
 ## Hope you liked it!
 
